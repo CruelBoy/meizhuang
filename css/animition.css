@@ -1,0 +1,104 @@
+/*banner*/
+@keyframes arrowUp1 {
+	0% {  left:194px; top:336px; }
+	20% { left:194px; top:366px;}
+	40% { left:174px; top:346px;}
+	60% { left:194px; top:356px;}
+	80% { left:174px; top:346px;}
+	100% {left:194px; top:336px;}	
+}
+@-webkit-keyframes arrowUp1 {
+	0% {  left:194px; top:336px; }
+	20% { left:194px; top:366px;}
+	40% { left:174px; top:346px;}
+	60% { left:194px; top:356px;}
+	80% { left:174px; top:346px;}
+	100% {left:194px; top:336px;}	
+}
+@-moz-keyframes arrowUp1 {
+	0% {  left:194px; top:336px; }
+	20% { left:194px; top:366px;}
+	40% { left:174px; top:346px;}
+	60% { left:194px; top:356px;}
+	80% { left:174px; top:346px;}
+	100% {left:194px; top:336px;}	
+	
+}
+@-ms-keyframes arrowUp1 {
+	0% {  left:194px; top:336px; }
+	20% { left:194px; top:366px;}
+	40% { left:174px; top:346px;}
+	60% { left:194px; top:356px;}
+	80% { left:174px; top:346px;}
+	100% {left:194px; top:336px;}	
+	
+}
+@keyframes arrowUp2 {
+	0% {  top:326px;}
+	30% { top:336px;}
+	70% { top:330px;}	
+	100% {top:326px;}	
+}
+@-webkit-keyframes arrowUp2 {
+	0% {  top:326px;}
+	30% { top:336px;}
+	70% { top:330px;}	
+	100% {top:326px;}	
+}
+@-moz-keyframes arrowUp2 {
+	0% {  top:326px;}
+	30% { top:336px;}
+	70% { top:330px;}	
+	100% {top:326px;}	
+}
+@-ms-keyframes arrowUp2 {
+	0% {  top:326px;}
+	30% { top:336px;}
+	70% { top:330px;}	
+	100% {top:326px;}	
+}
+@-moz-keyframes arrowUp3{
+	0%{ top: 388px; right: 88px;}
+	20%{ top: 384px; right: 88px;}
+	40%{ top: 388px; right: 98px;}
+	60%{ top:382px; right: 88px;}
+	80%{ top: 386px; right: 86px;}
+	100%{ top: 388px; right: 88px;}
+}
+@-ms-keyframes arrowUp3{
+	0%{ top: 388px; right: 88px;}
+	20%{ top: 384px; right: 88px;}
+	40%{ top: 388px; right: 98px;}
+	60%{ top:382px; right: 88px;}
+	80%{ top: 386px; right: 86px;}
+	100%{ top: 388px; right: 88px;}
+}
+@-webkit-keyframes arrowUp3{
+	0%{ top: 388px; right: 88px;}
+	20%{ top: 384px; right: 88px;}
+	40%{ top: 388px; right: 98px;}
+	60%{ top:382px; right: 88px;}
+	80%{ top: 386px; right: 86px;}
+	100%{ top: 388px; right: 88px;}
+}
+/*题目*/
+@-moz-keyframes swing{
+	0%{margin: 50px auto 20px; }
+	50%{margin: 30px auto 10px;}
+	100%{margin: 50px auto 20px;}
+}
+@-webkit-keyframes swing{
+	0%{margin: 50px auto 20px; }
+	50%{margin: 40px auto 10px;}
+	100%{margin: 50px auto 20px;}
+}
+@-ms-keyframes swing{
+	0%{margin: 50px auto 20px; }
+	50%{margin: 40px auto 10px;}
+	100%{margin: 50px auto 20px;}
+}
+@keyframes swing{
+	0%{margin: 50px auto 20px; }
+	50%{margin: 40px auto 10px;}
+	100%{margin: 50px auto 20px;}
+}

@@ -1,0 +1,71 @@
+.app_container{
+	width: 100%;
+    min-height: 758px;
+    background: url(../images/body/img/app下载/app_bg.jpg) no-repeat top center;
+    background-size: 1920px 758px;
+}
+.app_container .container{
+	width: 1200px;
+    margin: 0 auto;
+}
+.app_left{
+	float: left;
+    padding-left: 20px;
+}
+.app_left h2{
+	font-size: 40px;
+    color: #000;
+    line-height: 55px;
+    margin-top: 140px;
+}
+.app_left p{
+	font-size: 18px;
+    color: #000;
+    margin-top: 15px;
+}
+.app_left dl{
+	margin-top: 96px;
+}
+.app_left dl dt{
+	float: left;
+    position: relative;
+}
+.app_left dl span{
+	width: 138px;
+    height: 36px;
+    display: block;
+    background: url(../images/body/img/app下载/app_icon1.png) no-repeat center;
+    text-align: center;
+    color: #dd63b1;
+    font-size: 14px;
+    line-height: 29px;
+    top: -44px;
+    left: 10px;
+    position: absolute;
+}
+.app_left dd{
+	float: left;
+    padding: 11px 32px;
+}
+.app_left dd a{
+	width: 196px;
+    height: 56px;
+    display: block;
+    margin-bottom: 25px;
+}
+.app_left .ios{
+	background: url(../images/body/img/app下载/app_icon3.png) no-repeat;
+}
+.app_left .ios:hover{
+	background: url(../images/body/img/app下载/app_icon5.jpg) no-repeat;
+}
+.app_left .android{
+	background: url(../images/body/img/app下载/app_icon4.png) no-repeat;
+}
+.app_left .android:hover{
+	background: url(../images/body/img/app下载/app_icon6.png) no-repeat;
+}
+.app_right{
+	float: right;
+    margin-top: 100px;
+}

@@ -1,0 +1,364 @@
+.container_topNone {
+    margin: 0px auto;
+}
+.container {
+    max-width: 1200px;
+    overflow: hidden;
+}
+.c_m_title {
+    line-height: 60px;
+}
+.c_m_title dt {
+    float: left;
+}
+dt {
+    display: block;
+}
+
+.c_m_title dt a {
+    color: #666;
+    font-size: 12px;
+    float: left;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.c_m_title dt a:hover {
+    color: #ee2e95;
+    cursor: pointer;
+}
+
+.c_m_title dt img {
+    width: 5px;
+    height: 9px;
+    display: block;
+    float: left;
+    margin: 26px 6px 0;
+}
+.c_m_title dd {
+    float: right;
+    color: #333;
+    font-size: 16px;
+    background: url(../images/body/img/上门预约/MDJ_icon5.png) no-repeat left center;
+    padding-left: 30px;
+}
+.c_m_title dd:hover {
+    color: #ee2e95;
+    cursor: pointer;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.container_main_l {
+    float: left;
+    width: 800px;
+}
+.c_m_l_t {
+    background: #fff;
+    padding: 45px 52px;
+}
+.foucs {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.foucs .hd {
+    height: 28px;
+    overflow: hidden;
+    padding: 0 15px;
+    position: absolute;
+    bottom: 16px;
+    z-index: 1;
+    background: rgba(0,0,0,0.3);
+    border-radius: 28px;
+    width: 88px;
+    left: 50%;
+    margin-left: -44px;
+}
+.foucs .hd ul {
+    overflow: hidden;
+    zoom: 1;
+    float: left;
+}
+.foucs .hd ul li {
+    float: left;
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 14px;
+    margin: 7px 5px;
+}
+.foucs .hd ul li.on {
+    width: 30px;
+}
+.foucs .bd li {
+    zoom: 1;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.foucs .bd li {
+    zoom: 1;
+    vertical-align: middle;
+}
+.c_m_l_t dl dt {
+    color: #333;
+    font-size: 24px;
+    float: left;
+    line-height: 80px;
+}
+.c_m_l_t dl dd {
+    font-size: 24px;
+    color: #ee2e95;
+    float: right;
+    line-height: 80px;
+}
+.c_m_l_t p {
+    color: #999;
+    font-size: 14px;
+    line-height: 26px;
+}
+.c_m_l_c {
+    background: #fff;
+    padding: 52px;
+    margin-top: 10px;
+}
+.c_m_l_c dl {
+    position: relative;
+    margin-bottom: 25px;
+}
+.c_m_l_c dl dt {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.c_m_l_c dl dt img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 20px;
+}
+.c_m_l_c dl dt span {
+    font-size: 18px;
+    color: #333;
+    line-height: 30px;
+}
+.c_m_l_c dl dd {
+    padding-left: 120px;
+}
+.c_m_l_c dl dd p {
+    color: #333;
+    font-size: 14px;
+    line-height: 26px;
+    padding-top: 3px;
+}
+.container_main_r {
+    float: right;
+    width: 385px;
+    background: #fff;
+    min-height: 500px;
+}
+.container_main_r .title {
+    height: 60px;
+    border-bottom: 1px solid #f8f8f8;
+}
+.container_main_r .title span {
+    color: #131313;
+    font-size: 20px;
+    padding: 0 20px;
+    border-bottom: 3px solid #ee2e95;
+    line-height: 59px;
+    height: 59px;
+    display: inline-block;
+}
+.input_group {
+    padding: 0 25px 40px;
+}
+.input_group h2 {
+    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.input_group .list_1 {
+    position: relative;
+}
+.input_group dl {
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+}
+.input_group .list_1 dt {
+    float: left;
+    width: 120px;
+}
+.form_group {
+    padding: 0 15px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333;
+    border: 1px #e8e8e8 solid;
+    background: #fcfdfd;
+    display: block;
+    line-height: 38px;
+    position: relative;
+    cursor: pointer;
+}
+ul, li, dl, dt, dd, ol, p, img {
+    list-style: none;
+    border: none;
+}
+.form_group .img {
+    width: 7px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 17px;
+    right: 15px;
+}
+.city {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    background: #f2f2f3;
+    top: 39px;
+    padding: 10px 10px 0;
+    display: none;
+}
+.city li.active {
+    background: #ee2e95;
+    color: #fff;
+}
+.city li {
+    background: #fff;
+    color: #333;
+    float: left;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 96.66667px;
+}
+.input_group input {
+    padding: 11px 15px;
+}
+.form_control {
+    padding: 0 15px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    color: #333;
+    border-radius: 0;
+    border: 1px #e8e8e8 solid;
+    background: #fcfdfd;
+}
+.input_main {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    top: 39px;
+    display: none;
+}
+.input_group h2 {
+    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.input_group dl {
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+}
+.form_group {
+    padding: 0 15px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333;
+    border: 1px #e8e8e8 solid;
+    background: #fcfdfd;
+    display: block;
+    line-height: 38px;
+    position: relative;
+    cursor: pointer;
+}
+.form_group span {
+    margin-right: 10px;
+}
+.form_group .img {
+    width: 7px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 17px;
+    right: 15px;
+}
+.order_time {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    background: #f2f2f3;
+    top: 39px;
+    display: none;
+}
+.input_group h2 {
+    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.input_group dl {
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+}
+.form_control1 {
+    padding: 10px 15px;
+    min-height: 80px;
+}
+.btn_d {
+    background: #ee2e95;
+    border: none;
+    height: 60px;
+    width: 100%;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+

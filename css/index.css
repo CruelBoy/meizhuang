@@ -1,0 +1,59 @@
+
+/*banner开始*/
+.banner{ width: 100%; height: 814px; background: url(../images/body/img/首页/2016MDJ_PC_bg_icon1.jpg) no-repeat top center;}
+.banner .banner-wrap{ max-width: 1200px; height: 814px;margin: 0 auto; text-align: center; position: relative;}
+.banner .banner-wrap img{ vertical-align: middle; margin: 0 auto;}
+.banner .banner-wrap .video{ width: 524px; height: 316px; background: url(../images/body/img/首页/2016MDJ_PC_list1_icon2.png) no-repeat top center; margin: 0 auto; margin-top:-70px;position: relative;}
+.banner .banner-wrap .video .bg_01{ width: 520px; height: 312px; background: #000;}
+.banner .banner-wrap .video .bg_01 img{ display: block; width: 520px; height: 312px; position: absolute; top: 50%; left: 50%; margin-top: -156px; margin-left: -260px; z-index: 10; }
+.banner .banner-wrap .video .bg_01 video{ display: block; width: 520px; height: 312px; position: absolute; top: 50%; left: 50%; margin-top: -156px; margin-left: -260px;z-index: 1; }
+.banner .banner-wrap .big-ball-01{  position: absolute; top: 340px; left: 134px; -moz-animation:arrowUp1 4s infinite linear; -webkit-animation:arrowUp1 4s infinite linear; -ms-animation:arrowUp1 4s infinite linear;animation: arrowUp1 4s infinite linear;}
+.banner .banner-wrap .big-ball-02{ position: absolute; top: 330px; right: 160px;-moz-animation:arrowUp1 4s infinite linear; -webkit-animation:arrowUp2 4s infinite linear; -ms-animation:arrowUp2 4s infinite linear;animation: arrowUp2 4s infinite linear;}
+.banner .banner-wrap .big-ball-03{ position: absolute; top: 388px; right: 88px;-moz-animation:arrowUp3 4s infinite linear; -webkit-animation:arrowUp3 4s infinite linear; -ms-animation:arrowUp3 4s infinite linear;animation: arrowUp3 4s infinite linear;}
+/*产品推荐*/
+.produst_list{ width: 100%; height: 724px; background: url(../images/body/img/首页/bg_icon2.jpg) no-repeat top center;}
+.produst_list .produst_list_wrap{ max-width: 1200px; height: 100%;margin: 0 auto; overflow: hidden; border-bottom:15px solid #2dffe6;}
+.produst_list .produst_list_wrap .title img{ margin: 50px auto 20px; -moz-animation:swing 1s linear infinite alternate;-ms-animation:swing 1s linear infinite alternate;-webkit-animation:swing 1s linear infinite alternate;animation:swing 1s linear infinite alternate;}
+.produst_list .produst_list_wrap dl dt{ position: relative; float: left;}
+.produst_list .produst_list_wrap dl dd{ float: left;margin-left: 124px;margin-top: 40px;}
+.produst_list .produst_list_wrap dl dd span{width: 28px;height: 1px;display: block;margin: 24px auto 0;background: #c9c9c9;}
+.produst_list .produst_list_wrap dl dd p{font-size: 18px;color: #666;line-height: 28px;text-align: center; font-family: "微软雅黑";}
+.produst_list .produst_list_wrap dl dd p.list_1{ margin-top: 15px; margin-bottom: 30px;}
+.produst_list .produst_list_wrap dl dd p.list_2{ margin-top: 15px; }
+/*mua*/
+.mua_title{ width: 100%;background: #ff99da; height: 97px; text-align: center; position: relative; margin-top: 15px;}
+.mua_title h1{ font-family: "微软雅黑"; font-size: 40px; color:#FFFFFF;line-height: 97px;}
+.mua_title .img{ display: block; position: absolute; left: 50%; margin-left: -19.5px; bottom: -14px;}
+/*解放 绽放 怒放*/
+.list-title{ width: 100%; background: url(../images/body/img/首页/bg_icon3.jpg) no-repeat center top; height:879px;}
+.list-title .list-title_wrap{max-width: 1200px; height: 879px; /*background:#2DFFE6;*/ margin: 0 auto;}
+.list-title .list-title_wrap img{ display: block;}
+.list-title .list-title_wrap ul li{ width: 342px; height: 300px; float: left; margin-right: 87px; margin-top: 96px; text-align: center;}
+.list-title .list-title_wrap ul li span.line{width: 28px;height: 1px;display: block;margin: 10px auto 12px;background: #c9c9c9;}
+.list-title .list-title_wrap ul li p{font-size: 14px;color: #999;line-height: 24px;text-align: center; font-family: "微软雅黑";}
+.list-title .list-title_wrap .pic-1{font-size: 24px;color: #333;text-align: center;position: relative;padding: 0 45px;display:inline-block;margin: 25px 0 10px; }
+.list-title .list-title_wrap .pic-1 strong{ font-family: "微软雅黑"; background: #FFFFFF; padding: 0 10px; position: relative; z-index: 9;}
+.list-title .list-title_wrap .pic-1 span{ position: absolute;left:0;top: 50%;margin-top: -0.5px; width: 100%; z-index: 3; display: inline-block; height: 1px; background: #333;}
+#three img:hover{ box-shadow: 4px 6px 12px #888888; cursor: pointer;}
+/*用户体验*/
+.user{ width: 100%; background:url(../images/body/img/首页/bg_icon4.jpg) no-repeat center top; height:709px;}
+.user .user-wrap{ max-width: 1200px; height: 709px;  margin: 0 auto; text-align: center; overflow: hidden;}
+.user .user-wrap .title{ width: 590px; height:62px; margin: 76px auto 60px;}
+.user .user-wrap  ul{ width: 1200px; height: 420px;  margin: 0 auto;}
+.user .user-wrap  ul li{ width:372px; height: 420px; float: left; margin-right:42px; background: #FFFFFF;  display: inline-block;}
+.user .user-wrap  ul li div{ padding: 20px 30px 25px; text-align: left;}
+.user .user-wrap  ul li p{ font-family: "微软雅黑"; font-size: 14px; color: #666666;}
+.user .user-wrap  ul li h2{  font-family: "微软雅黑";font-size: 22px;color: #333;font-weight: normal;margin-top: 2px;margin-bottom: 18px;}
+.user .user-wrap  ul li a{ display: block; padding:10px 30px; background:#ee2e95; text-align: center; color: #FFFFFF; font-family: "微软雅黑"; font-size: 18px;}
+/*用户下载*/
+.downlode{ width: 100%; background: url(../images/body/img/首页/bg_icon5.jpg) no-repeat center top; height: 511px;}
+.downlode .downlode-wrap{ max-width: 1200px; height: 511px; margin: 0 auto;}
+.downlode .downlode-wrap dl{ width: 1200px; height: 511px;}
+.downlode .downlode-wrap dl dt{ float: left; margin-top:140px ;}
+.downlode .downlode-wrap dt span{ font-size: 26px;color: #2e2e2e;}
+.downlode .downlode-wrap dt h2{    color: #151515;font-size: 46px;margin-top: 12px;}
+.downlode .downlode-wrap dt p{ margin-top: 40px;}
+.downlode .downlode-wrap dt p .android{ display:inline-block ; background: url(../images/body/img/首页/list5_icon3.png) no-repeat left top; width: 196px; height:56px ; margin-right: 20px;}
+.downlode .downlode-wrap dt p .apple{ display:inline-block ; background: url(../images/body/img/首页/list5_icon2.png) no-repeat left top; width: 196px; height:56px ;}
+.downlode .downlode-wrap dd{ float: right; width: 540px; height: 511px; }
+

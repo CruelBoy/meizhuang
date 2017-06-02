@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/animition.css" />
+	<link rel="stylesheet" type="text/css" href="css/yyxq.css" />
+		<link rel="stylesheet" type="text/css" href="css/yuyue.css" />
+	</head>
+	
+	<body>
+		<body>
+		<!--
+        	描述：头部开始
+        -->
+        <div class="modal">
+        	<div class="modal_main">
+        		<div class="modal_main">
+            <i class="icon_img" onclick="closeModal()"><img class="close" src="images/body/index/2016PC_MDJ_icon12.png"></i>
+            <dl style="display: none;">
+                <input id="tmpId" class="form_control2"  placeholder="临时订单号">
+            </dl>
+            <dl>
+                <input class="form_control2" id="tel" placeholder="手机号码">
+            </dl>
+            <dl>
+                <input class="form_control2" id="captcha" placeholder="图片验证码">
+                <a class="form_img"></a>
+                <!--<a class="img" onclick="refreshCaptcha()"><img title="点击重新获取" alt="点击重新获取"  src="images/body/index/111.png"></a>-->
+            </dl>
+            <dl>
+                <input class="form_control2" id="code" placeholder="短信验证码">
+                <a onclick="getCheckCode()"  id="getCode">获取验证码</a>
+            </dl>
+            <button class="btn_f" id="checkCode" style="margin-top:40px;">登录</button>
+        </div>
+
+        	</div>
+        </div>
+			<div class="head">
+				<div class="head-wrap">
+					<div class="left">
+						<img src="images/body/index/logo.png" />
+					</div>
+					<ul>
+						<li><a href="index.html" class="a1">首页</a></li>
+						<li><a href="znhz.html">智能上妆</a></li>
+						<li><a href="smhz.html">上门化妆</a></li>
+						<li><a href="yyhz.html">预约化妆</a></li>
+						<li><a href="mzdd.html">美妆点滴</a></li>
+						<li><a href="app download.html">App下载</a></li>
+						<li><a href="about us.html">关于我们</a></li>
+					</ul>
+					<a href="javascript:;" class="music"></a>
+					<audio src="music/yinyue.mp3" autoplay="autoplay"></audio>
+					<div class="right">
+						<img src="images/body/img/首页/header_icon2.png"/>
+					</div>
+				</div>
+			</div>
+		<!--
+        	描述：头部结束
+        -->
+        	<div class="line"></div>
+        <div class="container container_topNone">
+        	<dl class="c_m_title clearfix">
+        		
+        		<dt>
+        			<a onclick="goMain()">首页</a>
+        			<img src="images/body/img/上门预约/MDJ_icon4.png">
+        			<a onclick="goMakeUp()">在线预约</a>
+        			<img src="images/body/img/上门预约/MDJ_icon4.png">
+        			<a onclick="goThis()">妆容详情</a>
+        		</dt>
+        		<dd class="open" onclick="goMyOrder()">我的订单</dd>
+   			 </dl>
+        
+        <!--内容-->
+        <div class="container_main_l">
+
+<div class="c_m_l_t">
+
+	<div class="foucs">
+
+		<div class="hd">
+			<ul class="btn">
+				<li class="on"></li>
+				<li class=""></li>
+				<li class=""></li>
+			</ul>
+		</div>
+		<div class="bd">
+			<div class="tempWrap" style=" position:relative; width:696px；">
+				<ul class="banner1" style="width: 3480px; height:416px; position: relative;  padding: 0px; margin: 0px; ">
+
+					<li style="float: left; width: 696px;">
+						<a><img src="images/body/img/上门预约/1.jpg"></a>
+					</li>
+					<li style="float: left; width: 696px;">
+						<a><img src="images/body/img/上门预约/2.jpg"></a>
+					</li>
+					<li style="float: left; width: 696px;">
+						<a><img src="images/body/img/上门预约/20bf6d442aac6593d833c99a4f0dd0e4.jpg"></a>
+					</li>
+					<li style="float: left; width: 696px;">
+						<a><img src="images/body/img/上门预约/1.jpg"></a>
+					</li>
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript">
+	$(function(){
+		//1.自定义函数 通过索引值计算UL的位置
+		function move(index){
+			//2.根据索引值计算UL的位置
+			var left = index * -696;
+			//3.根据计算出的位置改变UL的位置
+			$('.banner1').animate({'margin-left':left+'px'});
+			//3.1因为无缝滚动需要多一张图片，但小圆点只有5个，所以圆点的索引值只能到4 否则就变成0
+			if(index>2){
+				index = 0;
+			};
+			//4.根据索引值选择按钮添加类名 其它小伙伴删除类名
+			$('.btn li').eq(index).addClass('on').siblings().removeClass('on');
+		}
+		//move(4);
+		var sid;//保存定时器ID
+		var num = 0;//计数器
+		//自定义函数 由定时器定时运行
+		function play(){
+			num++;
+			if(num>3){
+				//到最后一张图的时候显示的是临时工
+				//瞬间让UL的位置变成第一张的，索引值也变成第一张。
+				num = 1;
+				$('.banner1').css('margin-left','0px');
+			}
+			move(num);
+			//alert(num)
+		}
+		sid = setInterval(play,1500);
+			$('.close').click(function() {
+//						$('.resources-down').css({'display':'none'});
+	                    $('.modal').fadeOut(500);
+//	                     $('.modal_main').fadeOut(500);
+	                  
+					
+					});
+					$('.open').click(function() {
+//						$('.resources-down').css({'display':'none'});
+	                    $('.modal').fadeIn(500);
+//	                     $('.modal_main').fadeOut(500);
+	                  
+					
+					});
+	});
+</script>
+
+            <dl class="clearfix">
+                <dt>职业妆</dt>
+                <dd>168 元起</dd>
+            </dl>
+            <p>在工作职场中，一款合适的妆容，不仅能让你赢得上司、同事和客户的第一印象好感，甚至可以帮助你获得专业、干练的认可。无论是职业女王，还是职场新人，好的通勤妆容一定会为你的工作加分不少。那么到底该如何把握？就来“美着呢”尝试一下吧！</p>
+        </div>
+
+        <div class="c_m_l_c clearfix">
+            <dl>
+                <dt><img src="images/body/img/上门预约/MDJ_icon6.png"><span>价格：</span></dt>
+                <dd>
+                    <p> 根据化妆师级别分为168元，268元，468元，868元。不另外收取化妆师上门费用。
+                         </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="images/body/img/上门预约/MDJ_icon7.png"><span>赠送：</span></dt>
+                <dd>
+                    <p> 简单发型（不含手推波纹、新娘盘发） </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="images/body/img/上门预约/MDJ_icon8.png"><span>客服：</span></dt>
+                <dd>
+                    <p>400-077-0885</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="images/body/img/上门预约/MDJ_icon9.png"><span>提示：</span></dt>
+                <dd>
+                    <p>1、所有造型均可根据您的喜好风格进行调整搭配；</p>
+                    <p>2、为了让妆容更加贴合您可以提前做些肌肤补水工作，少吃辛辣刺激 性食物，保持皮肤最佳状态；</p>
+                </dd>
+            </dl>
+        </div>
+
+
+       </div> 
+       <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+       <script type="text/javascript">
+        var bCity = "北京市";
+        var city = "";
+
+        function selectCity(){
+            var strbCity = $("#bCity").text();
+            strbCity = strbCity.replace(/ /g,"");
+            var o =document.getElementById("city").style.display;
+            if (o == "none" || o == ""){
+                $("#main_container").hide();
+                $("#city").find("li").each(function (){
+                    var strCity = $(this).text();
+                    strCity = strCity.replace(/ /g, "");
+                    if (strbCity == strCity){
+                        $(this).attr("class", "active");
+                    } else {
+                        $(this).attr("class", "");
+                    }
+                });
+                $("#city").show();
+            } else {
+                $("#city").hide();
+            }
+        }
+
+        function selectThis(tmp){
+            $("#city").find("li").each(function (){
+                $(this).attr("class", "");
+            })
+            $(tmp).attr("class","active");
+            bCity = $(tmp).text();
+            $("#bCity").text(bCity);
+            $("#city").hide();
+        }
+
+        function selectAutoTime(){
+            var selfYear = $("#selfYear").val();
+            var selfMonth = $("#selfMonth").val();
+            var selfDay = $("#selfDay").val();
+            var selfHour = $("#selfHour").val();
+            if (selfHour == ""){
+                alert("请选择服务时间");
+                return;
+            }
+
+            var strDate = selfYear + "-" + selfMonth + "-" + selfDay + " " + selfHour;
+
+            $("#date").text(strDate);
+
+
+            $("#order_time").hide();
+            $("#clearfix").hide();
+            $("#strDate").find("li").last().attr("class","");
+        }
+ jQuery(".foucs").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,easing:"easeOutCirc",delayTime:500});
+    </script>
+    <div class="container_main_r">
+        <div class="title"><span>在线预约</span></div>
+        <div class="input_group">
+            <form class="clearfix">
+                <h2>服务地址:</h2>
+                <dl class="list_1 clearfix">
+                    <dt>
+                        <a onclick="selectCity()" class="form_group"><li id="bCity"> 北京市 </li><i class="img"><img src="images/body/img/上门预约/MDJ_icon11.png"></i></a>
+                        <ul class="city" id="city">
+                                                            <li onclick="selectThis(this)" class="active">北京市</li>
+                                                            <li onclick="selectThis(this)">成都市</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">青岛市</li>
+                                                            <li onclick="selectThis(this)">大连市</li>
+                                                            <li onclick="selectThis(this)">沈阳市</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">上海市</li>
+                                                            <li onclick="selectThis(this)">杭州市</li>
+                                                            <li onclick="selectThis(this)">天津市</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">广州市</li>
+                                                            <li onclick="selectThis(this)">深圳市</li>
+                                                            <li onclick="selectThis(this)">济南市</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">武汉市</li>
+                                                            <li onclick="selectThis(this)">南京市</li>
+                                                            <li onclick="selectThis(this)">郑州市</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">厦门市</li>
+                                                            <li onclick="selectThis(this)">南宁市</li>
+                                                            <li onclick="selectThis(this)">太原市</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">长沙市</li>
+                                                            <li onclick="selectThis(this)">重庆市</li>
+                                                            <li onclick="selectThis(this)">三亚市</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">苏州市</li>
+                                                            <li onclick="selectThis(this)">贵阳市</li>
+                                                            <li onclick="selectThis(this)">香港</li>
+                                                            <li onclick="selectThis(this)" style="margin-right: 0px;">石家庄市</li>
+                                                            <li onclick="selectThis(this)">西安市</li>
+                                                            <li onclick="selectThis(this)">福州市</li>
+                                                    </ul>
+                    </dt>
+                    <dd>
+                        <input type="text" value="" id="txt_searchWord_nav" placeholder="请填写地址（如小区等）" class="form_control">
+                        <ul class="input_main" id="main_container">
+                        </ul>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <input type="text" value="" id="address" placeholder="请填写详细地址（如楼层、门牌号等）" class="form_control">
+                </dl>
+            </form>
+
+            <div class="clearfix">
+                <h2>服务时间:</h2>
+                <dl style="position:relative;">
+                    <a class="form_group form_group2" onclick="selectTime()"><span id="date"> 请选择服务时间 </span><i class="img"><img src="images/body/img/上门预约/MDJ_icon11.png"></i></a>
+                    <div class="order_time" id="order_time">
+                        <div class="hd">
+                            <ul id="strDate">
+                                <li><h1>今天</h1><span id="today">2月10日</span></li>
+                                <li><h1>明天</h1><span id="tomorrow">2月11日</span></li>
+                                <li><h1>后天</h1><span id="after">2月12日</span></li>
+                                <li id="autoDate">自定义</li>
+                            </ul>
+                        </div>
+                        <div class="bd" id="serviceHour">
+                            <ul id="todayHour">
+                            </ul>
+                            <ul id="tomorrowHour" style="display: none;">
+                            </ul>
+                            <ul id="afterHour" style="display: none;">
+                            </ul>
+                            <ul class="clearfix" id="clearfix" style="display: none;">
+                                <select class="option_s" id="selfYear">
+                                    <option value="2016">2016</option>
+                                </select>
+                                <select class="option_s" id="selfMonth" onchange="changeMonth(this)">
+                                    <option value="01">1月</option>
+                                    <option value="02">2月</option>
+                                    <option value="03">3月</option>
+                                    <option value="04">4月</option>
+                                    <option value="05">5月</option>
+                                    <option value="06">6月</option>
+                                    <option value="07">7月</option>
+                                    <option value="08">8月</option>
+                                    <option value="09">9月</option>
+                                    <option value="10">10月</option>
+                                    <option value="11">11月</option>
+                                    <option value="12">12月</option>
+                                </select>
+                                <select class="option_s" id="selfDay" onchange="changeDay(this)">
+                                    <option value="01">1日</option>
+                                    <option value="02">2日</option>
+                                    <option value="03">3日</option>
+                                    <option value="04">4日</option>
+                                    <option value="05">5日</option>
+                                    <option value="06">6日</option>
+                                    <option value="07">7日</option>
+                                    <option value="08">8日</option>
+                                    <option value="09">9日</option>
+                                    <option value="10">10日</option>
+                                    <option value="11">11日</option>
+                                    <option value="12">12日</option>
+                                    <option value="13">13日</option>
+                                    <option value="14">14日</option>
+                                    <option value="15">15日</option>
+                                    <option value="16">16日</option>
+                                    <option value="17">17日</option>
+                                    <option value="18">18日</option>
+                                    <option value="19">19日</option>
+                                    <option value="20">20日</option>
+                                    <option value="21">21日</option>
+                                    <option value="22">22日</option>
+                                    <option value="23">23日</option>
+                                    <option value="24">24日</option>
+                                    <option value="25">25日</option>
+                                    <option value="26">26日</option>
+                                    <option value="27">27日</option>
+                                    <option value="28">28日</option>
+                                    <option value="29">29日</option>
+                                    <option value="30">30日</option>
+                                    <option value="31">31日</option>
+                                </select>
+                                <select class="option_s" id="selfHour" style="margin-right: 0px;">
+                                    <optgroup label="营业时间"></optgroup>
+                                    <option type="0" value="08:00">08:00</option>
+                                    <option type="0" value="08:30">08:30</option>
+                                    <option type="0" value="09:00">09:00</option>
+                                    <option type="0" value="09:30">09:30</option>
+                                    <option type="0" value="10:00">10:00</option>
+                                    <option type="0" value="10:30">10:30</option>
+                                    <option type="0" value="11:00">11:00</option>
+                                    <option type="0" value="11:30">11:30</option>
+                                    <option type="0" value="12:00">12:00</option>
+                                    <option type="0" value="12:30">12:30</option>
+                                    <option type="0" value="13:00">13:00</option>
+                                    <option type="0" value="13:30">13:30</option>
+                                    <option type="0" value="14:00">14:00</option>
+                                    <option type="0" value="14:30">14:30</option>
+                                    <option type="0" value="15:00">15:00</option>
+                                    <option type="0" value="15:30">15:30</option>
+                                    <option type="0" value="16:00">16:00</option>
+                                    <option type="0" value="16:30">16:30</option>
+                                    <option type="0" value="17:00">17:00</option>
+                                    <option type="0" value="17:30">17:30</option>
+                                    <option type="0" value="18:00">18:00</option>
+                                    <option type="0" value="18:30">18:30</option>
+                                    <option type="0" value="19:00">19:00</option>
+                                    <option type="0" value="19:30">19:30</option>
+                                    <option type="0" value="20:00">20:00</option>
+                                </select>
+                                <label>
+                                    <button class="btn_e" onclick="selectAutoTime()">确定</button>
+                                </label>
+                            </ul>
+                        </div>
+                    </div>
+                  
+                </dl>
+            </div>
+
+            <form class="clearfix">
+                <h2>联系人:</h2>
+                <dl>
+                    <input type="text" value="" id="contacts" placeholder="请填写联系人姓名" class="form_control">
+                </dl>
+                <dl>
+                    <input type="tel" value="" id="mobile" placeholder="请填写联系人电话号码" class="form_control">
+                </dl>
+            </form>
+
+            <form class="clearfix">
+                <h2>备注:</h2>
+                <dl>
+                    <textarea name="" id="note" value="value=" ="" cols="" rows="" class="form_control form_control1"></textarea>
+                </dl>
+            </form>
+
+            <div class="clearfix" style="margin-top:30px;">
+                <button class="btn_d" onclick="goOrder()">立即预约</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript">
+        function closeModal(){
+            $("#modal").hide();
+            $("#tel").val("");
+            $("#tmpId").val("");
+            $("#captcha").val("");
+            $("#checkCode").attr("onclick", "")
+        }
+	$('.form_group2').click(function() {
+	                    $('.order_time').slideToggle(500);
+					});
+				$('.order_time .hd ul li').mouseover(function() {
+	                    $(this).addClass('on').css('color','#ee2e95').children().css('color','#ee2e95');
+	             
+					});		
+					$('.order_time .hd ul li').mouseout(function() {
+	                 $(this).addClass('on').css('color','#333').children().css('color','#333');
+	             
+					});	
+
+        function showOrder(returnUrl){
+            refreshCaptcha();
+            $("#captchaImg").val("");
+            $("#code").val("");
+            $("#checkCode").attr("onclick", "checkCode('" + returnUrl + "')")
+            $("#modal").show();
+        }
+
+        function showModal(id, mobile){
+            refreshCaptcha();
+            $("#captchaImg").val("");
+            $("#code").val("");
+            $("#tel").val(mobile);
+            $("#tmpId").val(id);
+            var returnUrl = "/Mdjweb/pcMain/artList/" + id;
+            $("#checkCode").attr("onclick", "checkCode('" + returnUrl + "')")
+            $("#modal").show();
+        }
+
+        function getYzm(){
+
+        }
+
+        var i = 59;
+        function setTout() {
+            if (i >= 0) {
+                $("#getCode").text(i-- + "s");
+                $("#getCode").removeAttr("onclick");
+                window.setTimeout("setTout()", 1000);
+            } else {
+                refreshCaptcha();
+                $("#getCode").attr("onclick", "getCheckCode();");
+                $("#getCode").text("获取验证码");
+            }
+        }
+
+        // 手机号码验证
+        var mobileReg = /^1([38]\d|4[57]|5[0-35-9]|7[06-8]|8[89])\d{8}$/;
+        function getCheckCode(){
+            var tel = document.getElementById("tel").value;
+            var captcha = document.getElementById("captcha").value;
+            if(!mobileReg.test(tel)){
+                alert("请输入正确的手机号");
+                return;
+            }
+            if(captcha == null || captcha.length < 3){
+                alert("请输入图片验证码");
+                return;
+            }
+            alert("验证码已发送，请耐心等待");
+            i= 59;
+            var checkUrl = "/Mdjweb/smsValidate/getSmsCode";
+            $.ajax({
+                type: "post",
+                url: checkUrl,
+                data:{
+                    tel: tel,
+                    captcha: captcha
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data.status != 0) {
+                        alert(data.info);
+                        refreshCaptcha();
+                        return;
+                    }else{
+                        setTout();
+                    }
+                },
+                error: function (data) {
+                    alert('服务端报错，' + data.status);
+                }
+            });
+        }
+
+        function checkCode(return_url) {
+            var tel = document.getElementById("tel").value;
+            var captcha = document.getElementById("captcha").value;
+            var tmpId = document.getElementById("tmpId").value;
+            if (!mobileReg.test(tel)) {
+                alert("请输入正确的手机号");
+                return false;
+            }
+            if(captcha == null || captcha.length < 3){
+                alert("请输入图片验证码");
+                return;
+            }
+            var code = $("#code").val();
+            if (code == null || $.trim(code) == "") {
+                alert("请输入验证码");
+                return false;
+            }
+            var checkUrl = "/Mdjweb/mdjWeb/checkCode";
+            $.ajax({
+                type:"POST",
+                url:checkUrl,
+                data:{
+                    tel: tel,
+                    code: code,
+                    captcha: captcha,
+                    tempOrderId: tmpId,
+                    return_url : return_url,
+                    pathFlag:"30"
+                },
+                dataType:"json",
+                success: function (data) {
+                    if (data.status == 0) {
+                        window.location.href = data.data;
+                    } else {
+                        alert(data.info);
+                        return;
+                    }
+                },
+                error: function (data) {
+                    alert('服务端报错，' + data.status);
+                }
+            });
+            return false;
+        }
+        function refreshCaptcha(){
+            var t=new Date().getTime()
+            var imgUrl= "/Mdjweb/smsValidate/getCaptcha?t="+t;
+            $("#captchaImg").attr("src",imgUrl);
+        }
+jQuery(".order_time").slide();
+    </script>
+    </div>
+    <!--
+        	描述:底部
+        -->
+        <div class="footer">
+
+        	<div class="footer-wrap">
+        		<ul>
+        			<li><a href="###">关于我们</a><i>丨</i></li>
+        			<li><a href="###">联系我们</a><i>丨</i></li>
+        			<li><a href="###">开通城市</a><i>丨</i></li>
+        			<li><a href="###">法律声明</a><i>丨</i></li>
+        			<li><a href="###">意见反馈</a></li>
+        		</ul>
+        		<div class="contact">
+        			<ul>
+        				<li><i><img src="images/body/img/首页/2016MDJ_PC_footer_icon1.png"/></i><span>公司地址 ：北京市海淀区</span></li>
+        				<li><i><img src="images/body/img/首页/2016MDJ_PC_footer_icon2.png"/></i><span>服务热线：400-077-0885</span></li>
+        				<li><i><img src="images/body/img/首页/2016MDJ_PC_footer_icon3.png"/></i><span>服务时间：8 : 00 - 22 : 00</span></li>
+        			</ul>
+        		</div>
+        		<div class="ewm">
+        			<dl>
+        				<dt>
+        					<h3>关注</h3>
+        					<p>美着呢微信平台</p>
+        					<p>更多美丽服务</p>
+        				</dt>
+        				<dd>
+        					<img src="images/body/index/footer_pic.jpg" width="135px" height="135px" />
+        				</dd>
+        			</dl>
+        		</div>
+        		<p class="bottom">Copyright © 2014 - 2016 meidaojia.com, All rights reserved. 北京美到家科技有限公司备案号：ICP备14042421号-1</p>
+        	</div>
+        	
+        </div>
+         <!--
+        	描述:bottom
+        -->
+        <div class="do"></div>
+	</body>
+</html>

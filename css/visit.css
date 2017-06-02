@@ -1,0 +1,14 @@
+.Visit-banner{background: url(../images/body/img/上门化妆/cpfw_banner.jpg); width: 1920px; height: 554px;}
+.content-visit1{width: 1200px; height:668px; margin: 0 auto; overflow: hidden;}
+.visit1_left{float: left; margin-top: 72px;}
+.visit1_right{float: right; margin-top: 144px;width: 479px; height: 378px;}
+.visit1_right .ph{position: absolute; }
+.visit1_right .p1{width: 360px; position: relative; z-index: 9; margin: 160px auto 0;}
+.visit1_right .p1 p{font-size: 14px; color: #666; line-height: 26px; margin-bottom: 15px;}
+/*第二部分*/
+.visit2_left{float: right;}
+.visit2_right{float: left;margin-top: 72px; width: 479px; height: 378px;}
+.visit2_right .ph{position: absolute; }
+.visit2_right .p1{width: 360px; position: relative; z-index: 9; margin: 160px auto 0;}
+.visit2_right .p1 p{font-size: 14px; color: #666; line-height: 26px; margin-bottom: 15px;}
+
